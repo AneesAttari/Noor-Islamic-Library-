@@ -1,0 +1,56 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: 'Cormorant Garamond', Georgia, Cambria, 'Times New Roman', serif;
+  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --font-arabic: 'Amiri', 'Traditional Arabic', serif;
+  --font-urdu: 'Noto Nastaliq Urdu', 'Noto Sans Arabic', 'Amiri', serif;
+}
+
+@layer base {
+  body {
+    font-family: var(--font-sans);
+    background-color: #FBF9F5;
+    color: #1C1917;
+  }
+  
+  html[dir="rtl"] body {
+    font-family: var(--font-urdu), var(--font-sans);
+  }
+
+  h1, h2, h3, h4, .font-editorial {
+    font-family: var(--font-serif);
+  }
+
+  html[dir="rtl"] h1,
+  html[dir="rtl"] h2,
+  html[dir="rtl"] h3,
+  html[dir="rtl"] h4,
+  html[dir="rtl"] .font-editorial {
+    font-family: var(--font-urdu), var(--font-serif);
+    line-height: 1.65;
+  }
+
+  /* RTL spacing compensation */
+  html[dir="rtl"] input,
+  html[dir="rtl"] textarea,
+  html[dir="rtl"] select {
+    text-align: right;
+  }
+}
+
+/* Custom scrollbars for academic reader */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #F4EFE6;
+}
+::-webkit-scrollbar-thumb {
+  background: #D6CEBE;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #A8A29E;
+}

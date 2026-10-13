@@ -1,0 +1,6 @@
+{
+  "name": "Noor - Islamic Library",
+  "description": "A scholarly digital library dedicated to authentic Islamic literature and manuscript preservation in PDF format.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
